@@ -29,6 +29,7 @@ if [[ $binary -ne 0 ]]; then
 	echo "PAYLOAD:" >> install.sh
 
 	cat $1 >>install.sh
+	chmod +x install.sh
 fi
 
 if [[ $uuencode -ne 0 ]]; then
@@ -40,5 +41,6 @@ if [[ $uuencode -ne 0 ]]; then
 	echo "PAYLOAD:" >> install.sh
 
 	cat $1 | uuencode - >>install.sh
+	chmod +x install.sh
 fi
 
